@@ -41,6 +41,14 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
 
+      - name: Install root dependencies
+        run: npm ci
+        working-directory: ./
+
+      - name: Install struct dependencies
+        run: npm ci
+        working-directory: ./packages/struct
+
       - name: Install dependencies
         run: npm ci
 
