@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[9302],{13382:e=>{e.exports=JSON.parse('{"label":"behave-graph","permalink":"/behave-graph-struct/blog/tags/behave-graph","allTagsPath":"/behave-graph-struct/blog/tags","count":1}')}}]);
