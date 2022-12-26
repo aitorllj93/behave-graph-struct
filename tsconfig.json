@@ -15,7 +15,11 @@
     "noImplicitThis": false,
     "baseUrl": "./",
     "jsx": "react",
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "paths": {
+      "packages/*": ["./packages/*"],
+      "@behave-graph/core/*": ["./packages/core/src/*"]
+    }
   },
   "include": ["packages/core/src", "packages/flow/src"],
   "exclude": ["**/*node_modules", "dist", "*.test.ts"],

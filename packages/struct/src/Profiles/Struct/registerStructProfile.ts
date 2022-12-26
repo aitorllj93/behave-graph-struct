@@ -1,7 +1,9 @@
 /* eslint-disable max-len */
 import { Registry } from '@behave-graph/core';
 import { registerSerializersForValueType } from '@behave-graph/core/src/Profiles/Core/registerSerializersForValueType';
+import Ajv from 'ajv';
 
+import { makeValidate } from './Logic/Validate';
 import { Concat, Concat3 } from './Values/List/Concat';
 import { Constant as ListConstant } from './Values/List/Constant';
 import { Equal as ListEqual } from './Values/List/Equal';
@@ -32,6 +34,7 @@ export function registerStructProfile(registry: Registry) {
   nodes.register(ListEqual);
   nodes.register(Concat);
   nodes.register(Concat3);
+  nodes.register(makeValidate(() => new Ajv()));
 
   // string converters
 
