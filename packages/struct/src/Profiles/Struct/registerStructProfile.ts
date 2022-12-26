@@ -1,8 +1,10 @@
 /* eslint-disable max-len */
-import { Registry } from '@behave-graph/core';
+import { DefaultLogger, ILogger, Registry } from '@behave-graph/core';
 import { registerSerializersForValueType } from '@behave-graph/core/src/Profiles/Core/registerSerializersForValueType';
 import Ajv from 'ajv';
 
+import { LogList } from './Debug/LogList';
+import { LogObject } from './Debug/LogObject';
 import { makeValidate } from './Logic/Validate';
 import { Concat, Concat3 } from './Values/List/Concat';
 import { Constant as ListConstant } from './Values/List/Constant';
@@ -15,7 +17,10 @@ import { MergeDeep } from './Values/Object/MergeDeep';
 import { Path, PathAsInteger, PathAsString } from './Values/Object/Path';
 import { ObjectValue } from './Values/Object/Value';
 
-export function registerStructProfile(registry: Registry) {
+export function registerStructProfile(
+  registry: Registry,
+  logger: ILogger = new DefaultLogger()
+) {
   const { nodes, values } = registry;
 
   // pull in value type nodes
@@ -34,6 +39,8 @@ export function registerStructProfile(registry: Registry) {
   nodes.register(ListEqual);
   nodes.register(Concat);
   nodes.register(Concat3);
+  nodes.register(LogObject.Description(logger));
+  nodes.register(LogList.Description(logger));
   nodes.register(makeValidate(() => new Ajv()));
 
   // string converters
