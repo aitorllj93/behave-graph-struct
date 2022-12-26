@@ -12,6 +12,7 @@ export function registerSerializersForValueType(
     new FunctionDesc({
       name: `math/to${camelCaseValueTypeName}/string`,
       label: `To ${camelCaseValueTypeName}`,
+      helpDescription: `Converts a string to a ${valueTypeName}`,
       in: ['string'],
       out: valueTypeName,
       exec: (a: string) => registry.values.get(valueTypeName).deserialize(a)
@@ -19,6 +20,7 @@ export function registerSerializersForValueType(
     new FunctionDesc({
       name: `math/toString/${valueTypeName}`,
       label: 'To String',
+      helpDescription: `Converts a ${valueTypeName} to a string`,
       in: [valueTypeName],
       out: 'string',
       exec: (a: any) => registry.values.get(valueTypeName).serialize(a)

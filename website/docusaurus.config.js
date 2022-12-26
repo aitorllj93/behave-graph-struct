@@ -40,13 +40,14 @@ const config = {
           editUrl:
             'https://github.com/aitorllj93/behave-graph-struct/tree/main/website/'
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/aitorllj93/behave-graph-struct/tree/main/website/'
-        },
+        blog: false,
+        // blog: {
+        //   showReadingTime: true,
+        //   // Please change this to your repo.
+        //   // Remove this to remove the "edit this page" links.
+        //   editUrl:
+        //     'https://github.com/aitorllj93/behave-graph-struct/tree/main/website/'
+        // },
         theme: {
           customCss: require.resolve('./src/css/custom.css')
         }
@@ -58,7 +59,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Behave-Graph',
+        title: 'Behave-Graph/Struct',
         // TODO: Include a logo
         logo: {
           alt: 'Behave-Graph Logo',
@@ -71,7 +72,7 @@ const config = {
             position: 'left',
             label: 'Docs'
           },
-          { to: '/blog', label: 'Blog', position: 'left' },
+          // { to: '/blog', label: 'Blog', position: 'left' },
           {
             href: 'https://github.com/aitorllj93/behave-graph-struct',
             label: 'GitHub',

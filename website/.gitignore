@@ -1,8 +1,6 @@
 # Dynamically generated content
-/docs/profiles/Core/Nodes
-/docs/profiles/Core/Values
-/docs/profiles/Scene/Nodes
-/docs/profiles/Scene/Values
+/docs/profiles/Struct/Nodes
+/docs/profiles/Struct/Values
 /docs/examples
 
 # Dependencies

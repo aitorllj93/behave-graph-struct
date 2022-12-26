@@ -33,6 +33,7 @@ export class FunctionDesc extends NodeDescription {
     name: string;
     label?: string;
     category?: NodeCategory;
+    helpDescription?: string;
     aliases?: string[];
     in?: { [name: string]: string }[] | string[];
     out: { [name: string]: string }[] | string;
@@ -69,7 +70,7 @@ export class FunctionDesc extends NodeDescription {
 
     super(
       props.name,
-      'Logic',
+      props.category || 'Logic',
       props.label ?? props.name,
       (description, graph) => {
         return new FunctionNode(
@@ -92,7 +93,8 @@ export class FunctionDesc extends NodeDescription {
           }
         );
       },
-      props.aliases
+      props.aliases,
+      props.helpDescription
     );
   }
 }

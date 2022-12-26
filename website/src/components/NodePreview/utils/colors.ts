@@ -7,7 +7,11 @@ export const colors: Record<string, [string, string, string]> = {
   purple: ['#805ad5', '#667eea', '#ffffff'],
   blue: ['#4299e1', '#63b3ed', '#ffffff'],
   gray: ['#718096', '#a0aec0', '#ffffff'],
-  white: ['#ffffff', '#ffffff', '#2d3748']
+  white: ['#ffffff', '#ffffff', '#2d3748'],
+  black: ['#2d3748', '#2d3748', '#ffffff'],
+  yellow: ['#f6e05e', '#ecc94b', '#ffffff'],
+  orange: ['#f6ad55', '#ed8936', '#ffffff'],
+  pink: ['#ed64a6', '#f56565', '#ffffff']
 };
 
 export const valueTypeColorMap: Record<string, string> = {
@@ -16,7 +20,9 @@ export const valueTypeColorMap: Record<string, string> = {
   float: 'green',
   integer: 'lime',
   boolean: 'red',
-  string: 'purple'
+  string: 'purple',
+  object: 'yellow',
+  list: 'orange'
 };
 
 export const categoryColorMap: Record<NodeSpecJSON['category'], string> = {
