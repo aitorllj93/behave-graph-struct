@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[3687],{24574:e=>{e.exports=JSON.parse('[{"label":"behave-graph","permalink":"/behave-graph-struct/blog/tags/behave-graph","count":1},{"label":"hello","permalink":"/behave-graph-struct/blog/tags/hello","count":1}]')}}]);
