@@ -16,12 +16,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
       - name: Use Node.js 16.x
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: 16.x
 
@@ -29,7 +29,7 @@ jobs:
         run: git fetch origin main
 
       - name: Cache node modules
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         env:
           cache-name: cache-node-modules
         with:
@@ -60,10 +60,10 @@ jobs:
         run: set +H
 
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.6
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: build/
+          folder: ./website/build/
 
       - name: Summarize deploy
         run: echo '### Deployed to Pages! :rocket:' >> $GITHUB_STEP_SUMMARY
